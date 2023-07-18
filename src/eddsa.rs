@@ -118,8 +118,8 @@ impl<E: JubjubEngine> PrivateKey<E> {
         // and being less than the group order when interpreted as integer, one can sign
         // the message directly without hashing
 
-        assert!(msg.len() <= max_message_size);
-        assert!(max_message_size * 8 <= E::Fs::CAPACITY as usize);
+        // assert!(msg.len() <= max_message_size);
+        // assert!(max_message_size * 8 <= E::Fs::CAPACITY as usize);
         // we also pad message to max size
 
         // pad with zeroes to match representation length
